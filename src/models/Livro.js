@@ -7,7 +7,13 @@ const livroShema = new mongoose.Schema({
   editora: { type: String },
   preco: { type: Number },
   paginas: { type: Number },
+  
+  // Utilizando o formato embedding.
   autor: autorShema
+
+  // Utilizando o formato referencing.
+  // autor: {type: mongoose.Schema.Types.ObjectId, ref: 'autores', required: true},
+
 }, { versionKey: false });
 
 const livro = mongoose.model("livros", livroShema);

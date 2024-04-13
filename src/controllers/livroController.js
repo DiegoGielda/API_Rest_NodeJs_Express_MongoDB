@@ -3,6 +3,20 @@ import livro from "../models/Livro.js";
 
 class LivroController {
 
+  /*
+  Utilizando o metodo por referencia deve utilizar o populate para "popular"
+    o campo autor
+  
+  static async listarLivros (req, res) {
+    try {
+      const listaLivros = await livro.find({}).populate("autor").exec();
+      res.status(200).json(listaLivros);
+    } catch (erro) {
+      res.status(500).json({ message: `${erro.message} - falha na requisição` });
+    }
+  }; 
+  */
+
   static async listarLivros(req, res) {
     try {
       const listaLivros = await livro.find({});
