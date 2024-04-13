@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const autorShema = new mongoose.Schema({
   id: { type: mongoose.Schema.Types.ObjectId },
-  nome: { type: String, require: true },
+  name: { type: String, require: true },
   nacionalidade: { type: String },
 }, { versionKey: false });
 
